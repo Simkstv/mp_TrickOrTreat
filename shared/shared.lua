@@ -1,5 +1,4 @@
 Config = {}
-Config.Enabled = false
 Config.DebugMode = false
 Config.DebugBlip = {
   blip = 1,
