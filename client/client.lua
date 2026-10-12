@@ -35,6 +35,7 @@ CreateThread(function()
       SetBlipScale(blip, 0.6)
       SetBlipAsShortRange(blip, true)
       SetBlipCategory(blip, 13)
+      SetBlipDisplay(blip, 5)
 
       BeginTextCommandSetBlipName('STRING')
       AddTextComponentSubstringPlayerName(
