@@ -24,27 +24,25 @@ CreateThread(function()
       })
       table.insert(zones, zoneId)
 
-      if Config.DebugMode then
-        AddTextEntry('BLIP_CAT_13', 'Halloween-Türen')
-        local blip = AddBlipForCoord(
-          door.coords.x,
-          door.coords.y,
-          door.coords.z
-        )
-        SetBlipSprite(blip, Config.DebugBlip.blip)
-        SetBlipColour(blip, Config.DebugBlip.color)
-        SetBlipScale(blip, 0.6)
-        SetBlipAsShortRange(blip, true)
-        SetBlipCategory(blip, 13)
+      AddTextEntry('BLIP_CAT_13', 'Halloween-Türen')
+      local blip = AddBlipForCoord(
+        door.coords.x,
+        door.coords.y,
+        door.coords.z
+      )
+      SetBlipSprite(blip, Config.DebugBlip.blip)
+      SetBlipColour(blip, Config.DebugBlip.color)
+      SetBlipScale(blip, 0.6)
+      SetBlipAsShortRange(blip, true)
+      SetBlipCategory(blip, 13)
 
-        BeginTextCommandSetBlipName('STRING')
-        AddTextComponentSubstringPlayerName(
-          ('Tür: %s #%s'):format(area, index)
-        )
-        EndTextCommandSetBlipName(blip)
+      BeginTextCommandSetBlipName('STRING')
+      AddTextComponentSubstringPlayerName(
+        ('Tür: %s #%s'):format(area, index)
+      )
+      EndTextCommandSetBlipName(blip)
 
-        table.insert(blips, blip)
-      end
+      table.insert(blips, blip)
     end
   end
 end)
